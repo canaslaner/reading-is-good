@@ -46,7 +46,11 @@ public class OrderServiceImpl implements OrderService {
 
     private Book findAndValidateBookToOrder(final Long bookId) {
         final var foundBook = bookService.findById(bookId)
-                .orElseThrow(() -> new OrderInvalidBookException("exception.order.notActiveBook"));
+                .orElseThrow(() -> new OrderInvalidBookException("exception.order.bookNotFound"));
+
+        if (!foundBook.isActive()) {
+            throw new OrderInvalidBookException("exception.order.notActiveBook");
+        }
 
         if (foundBook.getStock() < 1) {
             throw new OrderInvalidBookException("exception.order.outOfStockBook");

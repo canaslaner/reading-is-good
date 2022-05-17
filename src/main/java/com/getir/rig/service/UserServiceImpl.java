@@ -2,6 +2,7 @@ package com.getir.rig.service;
 
 import com.getir.rig.controller.dto.customer.RegisterRequest;
 import com.getir.rig.exception.EmailAlreadyUsedException;
+import com.getir.rig.exception.RigGenericException;
 import com.getir.rig.security.model.User;
 import com.getir.rig.security.model.enums.Authority;
 import com.getir.rig.security.repository.UserRepository;
@@ -44,6 +45,6 @@ public class UserServiceImpl implements UserService {
     public User findActiveByEmail(final String email) {
         return userRepository
                 .findByEmailAndActive(email, true)
-                .orElseThrow(RuntimeException::new);
+                .orElseThrow(() -> new RigGenericException("exception.userNotFound"));
     }
 }

@@ -2,6 +2,7 @@ package com.getir.rig.controller;
 
 import com.getir.rig.controller.dto.customer.RegisterRequest;
 import com.getir.rig.controller.dto.customer.UserInfoResponse;
+import com.getir.rig.exception.RigGenericException;
 import com.getir.rig.security.model.enums.Authority;
 import com.getir.rig.service.UserService;
 import com.getir.rig.util.SecurityUtils;
@@ -48,7 +49,8 @@ public class CustomerController {
             description = "Returns detail information about the customer",
             security = @SecurityRequirement(name = "bearer authorization token"))
     public UserInfoResponse getCustomerInfo() {
-        final var email = SecurityUtils.getCurrentUserEmail().orElseThrow();
+        final var email = SecurityUtils.getCurrentUserEmail()
+                .orElseThrow(() -> new RigGenericException("exception.userNotFound"));
         final var user = userService.findActiveByEmail(email);
         return UserInfoResponse.builder()
                 .id(user.getId())
