@@ -1,0 +1,1053 @@
+{
+	"info": {
+		"_postman_id": "096547e6-cfdf-4332-8f20-a10151625210",
+		"name": "Reading Is Good Company Main Application",
+		"description": "APIs for Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Statistics API",
+			"item": [
+				{
+					"name": "{{baseUrl}}/v1/stats/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/stats/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"stats",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "-84493832",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/stats/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"stats",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-84493832",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"stats\": [\n    {\n      \"month\": 85480750,\n      \"totalOrderCount\": 92627489,\n      \"totalPurchasedAmount\": -47352979.25913739,\n      \"totalBookCount\": 14133799\n    },\n    {\n      \"month\": -12416512,\n      \"totalOrderCount\": 39525508,\n      \"totalPurchasedAmount\": -53949674.13112859,\n      \"totalBookCount\": 2262077\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Manages customer statistics-related processes"
+		},
+		{
+			"name": "Order API",
+			"item": [
+				{
+					"name": "{{baseUrl}}/v1/order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/order?startDate=1989-08-22T07:04:08.296Z&endDate=1989-08-22T07:04:08.296Z&page=0&size=20&sort=sit ipsum sunt ad&sort=ullamco",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"order"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "1989-08-22T07:04:08.296Z",
+									"description": "(Required) "
+								},
+								{
+									"key": "endDate",
+									"value": "1989-08-22T07:04:08.296Z",
+									"description": "(Required) "
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"description": "Zero-based page index (0..N)"
+								},
+								{
+									"key": "size",
+									"value": "20",
+									"description": "The size of the page to be returned"
+								},
+								{
+									"key": "sort",
+									"value": "sit ipsum sunt ad",
+									"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported."
+								},
+								{
+									"key": "sort",
+									"value": "ullamco",
+									"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported."
+								}
+							]
+						},
+						"description": "Returns list of orders owned logged in customer"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/order?startDate=1989-08-22T07:04:08.296Z&endDate=1989-08-22T07:04:08.296Z&page=0&size=20&sort=consequat aute esse&sort=dolore laboris",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"order"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "1989-08-22T07:04:08.296Z"
+										},
+										{
+											"key": "endDate",
+											"value": "1989-08-22T07:04:08.296Z"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "20"
+										},
+										{
+											"key": "sort",
+											"value": "consequat aute esse"
+										},
+										{
+											"key": "sort",
+											"value": "dolore laboris"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"totalPages\": -41474863,\n  \"totalElements\": 60978469,\n  \"first\": false,\n  \"last\": true,\n  \"number\": -96466764,\n  \"sort\": {\n    \"sorted\": true,\n    \"unsorted\": false,\n    \"empty\": false\n  },\n  \"numberOfElements\": 81473678,\n  \"pageable\": {\n    \"sort\": {\n      \"sorted\": false,\n      \"unsorted\": true,\n      \"empty\": false\n    },\n    \"pageNumber\": 15495142,\n    \"pageSize\": 1585189,\n    \"unpaged\": true,\n    \"paged\": true,\n    \"offset\": 16962053\n  },\n  \"size\": 94791466,\n  \"content\": [\n    {\n      \"id\": 8301583,\n      \"userId\": 35356128,\n      \"firstName\": \"consequat sunt sit\",\n      \"lastName\": \"velit esse consectetur dolor\",\n      \"book\": {\n        \"active\": false,\n        \"author\": \"et\",\n        \"isbn\": \"dolore nisi nostrud\",\n        \"name\": \"est dolor\",\n        \"sku\": \"sed in sint\",\n        \"id\": 69797807,\n        \"description\": \"amet\",\n        \"stock\": 50127011,\n        \"price\": 86169728.38256969\n      },\n      \"quantity\": -25127419,\n      \"unitPrice\": -9840093.177592829,\n      \"totalPrice\": -34863755.785581455,\n      \"orderStatus\": \"CANCELLED\",\n      \"orderDate\": \"2015-05-20T09:26:08.984Z\"\n    },\n    {\n      \"id\": -85731393,\n      \"userId\": 76998085,\n      \"firstName\": \"est nisi dolore dolor\",\n      \"lastName\": \"in cupidatat\",\n      \"book\": {\n        \"active\": true,\n        \"author\": \"aute commodo cupidat\",\n        \"isbn\": \"in labore ipsum\",\n        \"name\": \"eu in sint amet ut\",\n        \"sku\": \"aute nostrud quis ea ex\",\n        \"id\": -51736444,\n        \"description\": \"pariatur in dolore consequat\",\n        \"stock\": 16751060,\n        \"price\": 22417234.720835246\n      },\n      \"quantity\": 75480759,\n      \"unitPrice\": -15539369.095870852,\n      \"totalPrice\": 99952650.34745252,\n      \"orderStatus\": \"RETURNED\",\n      \"orderDate\": \"1942-10-01T05:57:31.639Z\"\n    }\n  ],\n  \"empty\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/v1/order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bookId\": -56016217,\n  \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/order",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"order"
+							]
+						},
+						"description": "Returns list of orders owned logged in customer"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"bookId\": -56016217,\n  \"quantity\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"order\": {\n    \"id\": -16040479,\n    \"userId\": -64141468,\n    \"firstName\": \"laboris veniam\",\n    \"lastName\": \"sint\",\n    \"book\": {\n      \"active\": false,\n      \"author\": \"dolore irure veniam eiusmod\",\n      \"isbn\": \"minim ipsum esse\",\n      \"name\": \"ut\",\n      \"sku\": \"nulla cupidatat\",\n      \"id\": 62869141,\n      \"description\": \"laboris sit reprehenderit ad elit\",\n      \"stock\": 43030371,\n      \"price\": 81733631.87319452\n    },\n    \"quantity\": -18591057,\n    \"unitPrice\": -60720634.805944405,\n    \"totalPrice\": 28173255.552830547,\n    \"orderStatus\": \"CANCELLED\",\n    \"orderDate\": \"1982-03-31T20:25:40.554Z\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/v1/order/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/order/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"order",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "-84493832",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Returns list of orders owned logged in customer"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/order/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"order",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-84493832",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"order\": {\n    \"id\": -16040479,\n    \"userId\": -64141468,\n    \"firstName\": \"laboris veniam\",\n    \"lastName\": \"sint\",\n    \"book\": {\n      \"active\": false,\n      \"author\": \"dolore irure veniam eiusmod\",\n      \"isbn\": \"minim ipsum esse\",\n      \"name\": \"ut\",\n      \"sku\": \"nulla cupidatat\",\n      \"id\": 62869141,\n      \"description\": \"laboris sit reprehenderit ad elit\",\n      \"stock\": 43030371,\n      \"price\": 81733631.87319452\n    },\n    \"quantity\": -18591057,\n    \"unitPrice\": -60720634.805944405,\n    \"totalPrice\": 28173255.552830547,\n    \"orderStatus\": \"CANCELLED\",\n    \"orderDate\": \"1982-03-31T20:25:40.554Z\"\n  }\n}"
+						}
+					]
+				}
+			],
+			"description": "Manages order-related processes"
+		},
+		{
+			"name": "Customer API",
+			"item": [
+				{
+					"name": "{{baseUrl}}/v1/customer/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"pro\",\n  \"firstName\": \"fugiat adipisicing commodo\",\n  \"lastName\": \"aliqua consectetur sunt\",\n  \"password\": \"aliquip deserunt consectetur quis\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/customer/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"customer",
+								"register"
+							]
+						},
+						"description": "Register new customer to log in, order etc."
+					},
+					"response": [
+						{
+							"name": "User successfully registered.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"pro\",\n  \"firstName\": \"fugiat adipisicing commodo\",\n  \"lastName\": \"aliqua consectetur sunt\",\n  \"password\": \"aliquip deserunt consectetur quis\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/customer/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"customer",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "One or more field is/are invalid.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"pro\",\n  \"firstName\": \"fugiat adipisicing commodo\",\n  \"lastName\": \"aliqua consectetur sunt\",\n  \"password\": \"aliquip deserunt consectetur quis\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/customer/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"customer",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/v1/customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/customer",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"customer"
+							]
+						},
+						"description": "Returns detail information about the customer"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/customer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"customer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": -77768534,\n  \"firstName\": \"in qui officia irure ex\",\n  \"lastName\": \"eu aute\",\n  \"email\": \"veniam incididunt mollit\",\n  \"createdDate\": \"1974-09-12T21:31:35.410Z\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Manages customer-related processes"
+		},
+		{
+			"name": "Backoffice User API",
+			"item": [
+				{
+					"name": "{{baseUrl}}/v1/backoffice/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"pro\",\n  \"firstName\": \"fugiat adipisicing commodo\",\n  \"lastName\": \"aliqua consectetur sunt\",\n  \"password\": \"aliquip deserunt consectetur quis\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/backoffice/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"backoffice",
+								"register"
+							]
+						},
+						"description": "Register new backoffice user to log in and manage customers, orders etc."
+					},
+					"response": [
+						{
+							"name": "User successfully registered.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"pro\",\n  \"firstName\": \"fugiat adipisicing commodo\",\n  \"lastName\": \"aliqua consectetur sunt\",\n  \"password\": \"aliquip deserunt consectetur quis\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/backoffice/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"backoffice",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "One or more field is/are invalid.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"pro\",\n  \"firstName\": \"fugiat adipisicing commodo\",\n  \"lastName\": \"aliqua consectetur sunt\",\n  \"password\": \"aliquip deserunt consectetur quis\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/backoffice/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"backoffice",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"description": "Manages backoffice user-related processes"
+		},
+		{
+			"name": "Book API",
+			"item": [
+				{
+					"name": "{{baseUrl}}/v1/book",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/book?page=0&size=20&sort=sit ipsum sunt ad&sort=ullamco",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"book"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0",
+									"description": "Zero-based page index (0..N)"
+								},
+								{
+									"key": "size",
+									"value": "20",
+									"description": "The size of the page to be returned"
+								},
+								{
+									"key": "sort",
+									"value": "sit ipsum sunt ad",
+									"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported."
+								},
+								{
+									"key": "sort",
+									"value": "ullamco",
+									"description": "Sorting criteria in the format: property,(asc|desc). Default sort order is ascending. Multiple sort criteria are supported."
+								}
+							]
+						},
+						"description": "Finds all books by page with query parameters"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/book?page=0&size=20&sort=consequat aute esse&sort=dolore laboris",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"book"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "20"
+										},
+										{
+											"key": "sort",
+											"value": "consequat aute esse"
+										},
+										{
+											"key": "sort",
+											"value": "dolore laboris"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"totalPages\": 43039982,\n  \"totalElements\": -26613426,\n  \"first\": true,\n  \"last\": false,\n  \"number\": -63925056,\n  \"sort\": {\n    \"sorted\": false,\n    \"unsorted\": false,\n    \"empty\": true\n  },\n  \"numberOfElements\": -6338811,\n  \"pageable\": {\n    \"sort\": {\n      \"sorted\": false,\n      \"unsorted\": true,\n      \"empty\": false\n    },\n    \"pageNumber\": -85221598,\n    \"pageSize\": 28149091,\n    \"unpaged\": false,\n    \"paged\": false,\n    \"offset\": 99605327\n  },\n  \"size\": -26488267,\n  \"content\": [\n    {\n      \"active\": false,\n      \"author\": \"ut\",\n      \"isbn\": \"nisi qui\",\n      \"name\": \"culpa nostrud velit\",\n      \"sku\": \"consequat irure\",\n      \"id\": 60955164,\n      \"description\": \"nisi ad est\",\n      \"stock\": 61190324,\n      \"price\": 79794742.18080004\n    },\n    {\n      \"active\": false,\n      \"author\": \"magna\",\n      \"isbn\": \"officia cillum voluptate occaecat\",\n      \"name\": \"qui laborum Excepteur\",\n      \"sku\": \"Excepteur non in ex\",\n      \"id\": -85431959,\n      \"description\": \"consectetur\",\n      \"stock\": 31941697,\n      \"price\": 31237008.759485107\n    }\n  ],\n  \"empty\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/v1/book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"active\": false,\n  \"author\": \"in ullamco\",\n  \"isbn\": \"aliqua commodo\",\n  \"name\": \"Duis enim aliqua\",\n  \"sku\": \"pariatur\",\n  \"id\": 18627083,\n  \"description\": \"esse \",\n  \"stock\": 30072641,\n  \"price\": 64747711.70560739\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/book",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"book"
+							]
+						},
+						"description": "Creates new books with their metadata"
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"active\": false,\n  \"author\": \"in ullamco\",\n  \"isbn\": \"aliqua commodo\",\n  \"name\": \"Duis enim aliqua\",\n  \"sku\": \"pariatur\",\n  \"id\": 18627083,\n  \"description\": \"esse \",\n  \"stock\": 30072641,\n  \"price\": 64747711.70560739\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/book",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"book"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/v1/book/:id/stock",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"stock\": 92175986\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/book/:id/stock",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"book",
+								":id",
+								"stock"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "-84493832",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Updates single specific book's stock information"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"stock\": 92175986\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/book/:id/stock",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"book",
+										":id",
+										"stock"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-84493832",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"book\": {\n    \"active\": false,\n    \"author\": \"esse\",\n    \"isbn\": \"exercitation magna fugiat reprehenderit\",\n    \"name\": \"in quis ea\",\n    \"sku\": \"proident Ut ipsum amet\",\n    \"id\": -37582893,\n    \"description\": \"labore sint exercitation sunt consequat\",\n    \"stock\": 86586966,\n    \"price\": 60451830.95783182\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/v1/book/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/book/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"book",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "-84493832",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Returns book by its id information"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/v1/book/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"book",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-84493832",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"book\": {\n    \"active\": false,\n    \"author\": \"esse\",\n    \"isbn\": \"exercitation magna fugiat reprehenderit\",\n    \"name\": \"in quis ea\",\n    \"sku\": \"proident Ut ipsum amet\",\n    \"id\": -37582893,\n    \"description\": \"labore sint exercitation sunt consequat\",\n    \"stock\": 86586966,\n    \"price\": 60451830.95783182\n  }\n}"
+						}
+					]
+				}
+			],
+			"description": "Manages book-related processes"
+		},
+		{
+			"name": "Login API",
+			"item": [
+				{
+					"name": "{{baseUrl}}/v1/login/authenticate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"ea laborum voluptate eu\",\n  \"username\": \"laboris\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/login/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"login",
+								"authenticate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"ea laborum voluptate eu\",\n  \"username\": \"laboris\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/login/authenticate",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"login",
+										"authenticate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"token\": \"sunt amet\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Manages login-related processes"
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

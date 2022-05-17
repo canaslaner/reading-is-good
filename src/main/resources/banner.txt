@@ -1,0 +1,13 @@
+${AnsiBackground.MAGENTA}${Ansi.BRIGHT_YELLOW}                   _     _          ${AnsiBackground.DEFAULT}
+${AnsiBackground.MAGENTA}${Ansi.BRIGHT_YELLOW}                  | |   (_)         ${AnsiBackground.DEFAULT}
+${AnsiBackground.MAGENTA}${Ansi.BRIGHT_YELLOW}     __ _    ___  | |_   _   _ __   ${AnsiBackground.DEFAULT}
+${AnsiBackground.MAGENTA}${Ansi.BRIGHT_YELLOW}    / _` |  / _ \ | __| | | | '__|  ${AnsiBackground.DEFAULT}
+${AnsiBackground.MAGENTA}${Ansi.BRIGHT_YELLOW}   | (_| | |  __/ | |_  | | | |     ${AnsiBackground.DEFAULT}
+${AnsiBackground.MAGENTA}${Ansi.BRIGHT_YELLOW}    \__, |  \___|  \__| |_| |_|     ${AnsiBackground.DEFAULT}
+${AnsiBackground.MAGENTA}${Ansi.BRIGHT_YELLOW}     __/ |                          ${AnsiBackground.DEFAULT}
+${AnsiBackground.MAGENTA}${Ansi.BRIGHT_YELLOW}    |___/                           ${AnsiBackground.DEFAULT}
+
+${Ansi.RED}
+** Spring Boot ${spring-boot.version}
+** Application '${spring.application.name}' is starting
+${Ansi.DEFAULT}
